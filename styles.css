@@ -21,6 +21,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   display: flex;
+  font-size: 1em;
   justify-content: flex-start;
 }
 
@@ -95,19 +96,37 @@ h6 {
   background-color: #cce3de;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* .container-right-top,
-.container-right-bottom {} */
+.container-right-top {
+  font-size: 1.1rem;
+  margin: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
 
 .container-right-middle {
   background-color: #f6fff8;
   height: 35%;
   width: 100%;
-  margin: auto;
   -webkit-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
   -moz-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
   box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
+}
+
+.container-right-bottom {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
 }
 
 #logo-name {
@@ -116,3 +135,34 @@ h6 {
   font-style: normal;
   color: #f6fff8;
 }
+
+.sign-up-form {
+  margin-top: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* .container-right p {
+  width: 80%;
+  margin: auto;
+  vertical-align: center;
+} */
+
+#submit-button {
+  background-color: #6b9080;
+  border: none;
+  padding: 1em;
+  color: #f6fff8;
+}
+
+input {
+  border: solid #6b9080 2px;
+
+}
+
+
+/* Color Palette */
+/* https: //coolors.co/palette/6b9080-a4c3b2-cce3de-eaf4f4-f6fff8 */

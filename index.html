@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign-up Form</title>
+  <title>Chapter & Verse: Sign-up Form</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preload" href="fonts/adelia.woff2" as="font" type="font/woff2" crossorigin>
 </head>
@@ -18,27 +18,49 @@
   </div>
   <div class="container-right">
     <div class="container-right-top">
-      <p class='header-text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur reprehenderit cum
-        nesciunt quas et expedita, consectetur sint, suscipit iste asperiores obcaecati numquam magni sit in provident
-        nisi blanditiis alias earum.</p>
+      <h1>Welcome to Chapter & Verse</h1>
+      <p>Your next favorite book is waiting for you!</p>
+      <p>Every week, we handpick book recommendations just for you—based on your unique reading tastes, favorite genres,
+        and recently finished books. Whether you're into heart-racing thrillers, thought-provoking sci-fi, or cozy
+        romances, we've got the perfect read lined up.</p>
+      <ul>
+        <li>📖 Personalized Picks – Get books that match your reading style.</li>
+        <li>📬 Delivered Weekly – Fresh recommendations sent straight to your inbox.</li>
+        <li>📚 Discover Hidden Gems – Find books you never knew you needed.</li>
+      </ul>
+      <p>Ready to start your next great adventure? Sign up now and let the stories begin!</p>
     </div>
     <div class="container-right-middle">
       <h2>Create an account</h2>
       <form class='sign-up-form' action='' method='post'>
-        <label for="fname">First Name</label>
-        <input type="text" name='fname'>
-        <label for="lname">Last Name</label>
-        <input type="text" name='lname'>
-        <label for="email">Email</label>
-        <input type="email" name='email'>
-        <label for="password">Password</label>
-        <input type="password" name='password'>
-        <label for="password-confirm">Confirm Password</label>
-        <input type="password" name='password-confirm'>
+        <div>
+          <label for="fname">First Name</label>
+          <input type="text" name='fname'>
+        </div>
+        <div>
+          <label for="lname">Last Name</label>
+          <input type="text" name='lname'>
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" name='email'>
+        </div>
+        <div>
+          <label for="phone">Phone Number</label>
+          <input type="tel" name='phone'>
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" name='password'>
+        </div>
+        <div>
+          <label for="password-confirm">Confirm Password</label>
+          <input type="password" name='password-confirm'>
+        </div>
       </form>
     </div>
     <div class="container-right-bottom">
-      <button type='submit' class="submit-button">Create Account</button>
+      <button type='submit' id="submit-button">Create Account</button>
       <p class="login-text">Already have an account?<a href=''>Log in</a></p>
     </div>
   </div>
