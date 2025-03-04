@@ -148,6 +148,10 @@ h6 {
 }
 
 .sign-up-form {
+  --activeColor: green;
+  --invalidColor: #D55C5F;
+
+
   margin-top: 20px;
   width: 80%;
   display: flex;
@@ -176,17 +180,32 @@ h6 {
   width: 100%;
 }
 
-/* .container-right p {
-  width: 80%;
-  margin: auto;
-  vertical-align: center;
-} */
+.sign-up-form input:focus {
+  padding: 8px;
+  border-radius: 4px;
+  background-color: #eaf4f4;
+  width: 100%;
+  box-shadow: none;
+  outline: none;
+}
+
+.sign-up-form input:invalid {
+  padding: 8px;
+  border: solid #D55C5F 2px;
+  border-radius: 4px;
+  width: 100%;
+  box-shadow: none;
+}
 
 #submit-button {
   background-color: #6b9080;
   border: none;
   padding: 1em;
   color: #f6fff8;
+}
+
+#submit-button:hover {
+  filter: brightness(1.2);
 }
 
 input {
