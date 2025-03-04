@@ -6,6 +6,12 @@
 
 * {
   margin: 0;
+  --darkestGreen: #476156;
+  --darkGreen: #6b9080;
+  --activeInput: #eaf4f4;
+  --invalidRed: #D55C5F;
+  --bgGreen: #cce3de;
+  --lightGreen: #f6fff8;
 }
 
 @font-face {
@@ -105,23 +111,12 @@ h6 {
 .container-right {
   width: 70%;
   height: 100vh;
-  background-color: #cce3de;
+  background-color: var(--bgGreen);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
 }
-
-/* .container-right-top {
-  font-size: 1.1rem;
-  margin: auto;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-} */
 
 .container-right-top {
   font-size: 1.1rem;
@@ -131,42 +126,37 @@ h6 {
   justify-content: center;
   width: 100%;
   padding: 40px 60px;
-  /* Increased padding for better spacing */
   max-width: 800px;
-  /* Limit width for better readability */
   margin: 0 auto;
-  /* Center content horizontally */
-  line-height: 1.6;
-  /* Better line spacing */
+  line-height: 1.5;
 }
 
 .container-right-top h1 {
-  color: #2c3e50;
-  margin-bottom: 20px;
+  color: var(--darkestGreen);
+  margin-bottom: 30px;
   font-size: 2.2rem;
   font-weight: bold;
 }
 
 .container-right-top p {
-  margin-bottom: 15px;
-  color: #34495e;
+  margin-bottom: 10px;
 }
 
 .container-right-top ul {
   list-style-type: none;
   padding-left: 0;
-  margin: 15px 0 20px 0;
+  margin: 0 0 10px 0;
 }
 
 .container-right-top li {
-  padding: 8px 0;
-  margin-left: 10px;
+  padding: 6px 0;
+  margin-left: 25px;
   position: relative;
 }
 
 .container-right-middle {
-  background-color: #f6fff8;
-  height: 380px;
+  background-color: var(--lightGreen);
+  height: 350px;
   width: 100%;
   -webkit-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
   -moz-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
@@ -181,22 +171,20 @@ h6 {
   margin-bottom: 10px;
   align-self: flex-start;
   margin-left: 10%;
+  color: #476156;
 }
 
 .container-right-bottom {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 80%;
   padding: 20px;
 }
 
 .sign-up-form {
-  --activeColor: green;
-  --invalidColor: #D55C5F;
-
-
   margin-top: 20px;
   width: 80%;
   display: flex;
@@ -215,12 +203,12 @@ h6 {
   font-size: 0.9rem;
   font-weight: bold;
   margin-bottom: 4px;
-  color: #6b9080;
+  color: var(--darkestGreen);
 }
 
 .sign-up-form input {
   padding: 8px;
-  border: solid #6b9080 2px;
+  border: solid --darkestGreen 2px;
   border-radius: 4px;
   width: 100%;
 
@@ -229,25 +217,32 @@ h6 {
 .sign-up-form input:focus {
   padding: 8px;
   border-radius: 4px;
-  background-color: #eaf4f4;
+  background-color: var(--activeInputGreen);
   width: 100%;
   box-shadow: none;
   outline: none;
 }
 
+.sign-up-form input:hover {
+  filter: brightness(1.2);
+}
+
 .sign-up-form input:invalid {
   padding: 8px;
-  border: solid #D55C5F 2px;
+  border: solid var(--invalidRed) 2px;
   border-radius: 4px;
   width: 100%;
   box-shadow: none;
 }
 
 #submit-button {
-  background-color: #6b9080;
+  background-color: var(--darkGreen);
   border: none;
   padding: 1em;
-  color: #f6fff8;
+  color: var(--lightGreen);
+  border-radius: 5px;
+  margin: 15px 0 15px 0;
+  width: 235px;
 }
 
 #submit-button:hover {
@@ -255,15 +250,16 @@ h6 {
 }
 
 input {
-  border: solid #6b9080 2px;
-
+  border: solid var(--darkestGreen) 2px;
 }
 
-ul,
-li {
-  list-style-type: none;
+a {
+  color: #476156;
 }
 
+a:hover {
+  filter: brightness(1.2);
+}
 
 /* Color Palette */
 /* https: //coolors.co/palette/6b9080-a4c3b2-cce3de-eaf4f4-f6fff8 */
