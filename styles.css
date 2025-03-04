@@ -11,6 +11,8 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  justify-content: flex-start;
 }
 
 img,
@@ -55,4 +57,47 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+
+
+.container-left {
+  width: 30%;
+  height: 100vh;
+  background-image: url('./images/henry-be-lc7xcWebECc-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.logo-banner {
+  position: absolute;
+  margin-top: 50px;
+  height: 15%;
+  width: 100%;
+  background-color: #f6fff880;
+}
+
+.container-right {
+  width: 70%;
+  height: 100vh;
+  background-color: #cce3de;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-right-top,
+.container-right-bottom {}
+
+.container-right-middle {
+  background-color: #f6fff8;
+  height: 35%;
+  width: 100%;
+  margin: auto;
+  -webkit-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
+  -moz-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
+  box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
 }
