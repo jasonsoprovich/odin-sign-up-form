@@ -8,6 +8,15 @@
   margin: 0;
 }
 
+@font-face {
+  font-family: 'adelia';
+  src: url('fonts/adelia.woff2') format('woff2'),
+    url('fonts/adelia.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -60,7 +69,6 @@ h6 {
 }
 
 
-
 .container-left {
   width: 30%;
   height: 100vh;
@@ -89,8 +97,8 @@ h6 {
   flex-direction: column;
 }
 
-.container-right-top,
-.container-right-bottom {}
+/* .container-right-top,
+.container-right-bottom {} */
 
 .container-right-middle {
   background-color: #f6fff8;
@@ -100,4 +108,11 @@ h6 {
   -webkit-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
   -moz-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
   box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
+}
+
+#logo-name {
+  font-family: 'adelia';
+  font-weight: normal;
+  font-style: normal;
+  color: #f6fff8;
 }

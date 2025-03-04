@@ -6,19 +6,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign-up Form</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="preload" href="fonts/adelia.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 
 <body>
 
   <div class="container-left">
     <div class="logo-banner">
-      LOGO
+      <p id='logo-name'>Chapter & Verse</p>
     </div>
   </div>
   <div class="container-right">
-    <div class="container-right-top">top</div>
-    <div class="container-right-middle">buttons</div>
-    <div class="container-right-bottom">submit button</div>
+    <div class="container-right-top">
+      <p class='header-text'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur reprehenderit cum
+        nesciunt quas et expedita, consectetur sint, suscipit iste asperiores obcaecati numquam magni sit in provident
+        nisi blanditiis alias earum.</p>
+    </div>
+    <div class="container-right-middle">
+      <h2>Create an account</h2>
+      <form class='sign-up-form' action='' method='post'>
+        <label for="fname">First Name</label>
+        <input type="text" name='fname'>
+        <label for="lname">Last Name</label>
+        <input type="text" name='lname'>
+        <label for="email">Email</label>
+        <input type="email" name='email'>
+        <label for="password">Password</label>
+        <input type="password" name='password'>
+        <label for="password-confirm">Confirm Password</label>
+        <input type="password" name='password-confirm'>
+      </form>
+    </div>
+    <div class="container-right-bottom">
+      <button type='submit' class="submit-button">Create Account</button>
+      <p class="login-text">Already have an account?<a href=''>Log in</a></p>
+    </div>
   </div>
 
 </body>
