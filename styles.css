@@ -18,6 +18,7 @@
 }
 
 body {
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   display: flex;
@@ -113,11 +114,21 @@ h6 {
 
 .container-right-middle {
   background-color: #f6fff8;
-  height: 35%;
+  height: 380px;
   width: 100%;
   -webkit-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
   -moz-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
   box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-right-middle h2 {
+  margin-bottom: 10px;
+  align-self: flex-start;
+  margin-left: 10%;
 }
 
 .container-right-bottom {
@@ -137,12 +148,32 @@ h6 {
 }
 
 .sign-up-form {
-  margin-top: 50px;
+  margin-top: 20px;
   width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
+}
+
+.sign-up-form div {
+  display: flex;
+  flex-direction: column;
+  width: calc(50% - 15px);
+}
+
+.sign-up-form label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #6b9080;
+}
+
+.sign-up-form input {
+  padding: 8px;
+  border: solid #6b9080 2px;
+  border-radius: 4px;
+  width: 100%;
 }
 
 /* .container-right p {
@@ -161,6 +192,10 @@ h6 {
 input {
   border: solid #6b9080 2px;
 
+}
+
+ul {
+  list-style-type: none;
 }
 
 
