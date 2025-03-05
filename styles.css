@@ -261,5 +261,34 @@ a:hover {
   filter: brightness(1.2);
 }
 
+#password-message {
+  display: none;
+  background: var(--lightGreen);
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.valid {
+  color: var(--validGreen, green);
+}
+
+.valid::before {
+  position: relative;
+  left: -35px;
+  content: '&#10004;';
+}
+
+.invalid {
+  color: var(--invalidRed, red);
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+  content: '&#10006;';
+}
+
 /* Color Palette */
 /* https: //coolors.co/palette/6b9080-a4c3b2-cce3de-eaf4f4-f6fff8 */
