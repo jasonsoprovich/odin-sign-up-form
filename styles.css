@@ -10,6 +10,7 @@
   --darkGreen: #6b9080;
   --activeInput: #eaf4f4;
   --invalidRed: #D55C5F;
+  --validGreen: rgb(0, 164, 0);
   --bgGreen: #cce3de;
   --lightGreen: #f6fff8;
 }
@@ -197,6 +198,8 @@ h6 {
   display: flex;
   flex-direction: column;
   width: calc(50% - 15px);
+  position: relative;
+  /* Add this line to make the div a positioning context */
 }
 
 .sign-up-form label {
@@ -204,6 +207,8 @@ h6 {
   font-weight: bold;
   margin-bottom: 4px;
   color: var(--darkestGreen);
+  position: relative;
+  /* Add this to make positioning work properly */
 }
 
 .sign-up-form input {
@@ -221,10 +226,6 @@ h6 {
   width: 100%;
   box-shadow: none;
   outline: none;
-}
-
-.sign-up-form input:hover {
-  filter: brightness(1.2);
 }
 
 .sign-up-form input:invalid {
@@ -270,24 +271,41 @@ a:hover {
   margin-top: 10px;
 }
 
-.valid {
+#password-message h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.pwd-valid {
   color: var(--validGreen, green);
 }
 
-.valid::before {
+.pwd-valid:before {
   position: relative;
   left: -35px;
-  content: '&#10004;';
+  content: '\2714';
 }
 
-.invalid {
+.pwd-invalid {
   color: var(--invalidRed, red);
 }
 
-.invalid:before {
+.pwd-invalid:before {
   position: relative;
   left: -35px;
-  content: '&#10006;';
+  content: '\2716';
+
+}
+
+/* Simpler alternative */
+.sign-up-form label[for="fname"]::after,
+.sign-up-form label[for="email"]::after,
+.sign-up-form label[for="password"]::after {
+  content: " (required)";
+  color: var(--invalidRed);
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-left: 4px;
 }
 
 /* Color Palette */

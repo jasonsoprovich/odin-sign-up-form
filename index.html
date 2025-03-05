@@ -7,6 +7,7 @@
   <title>Chapter & Verse: Sign-up Form</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preload" href="fonts/adelia.woff2" as="font" type="font/woff2" crossorigin>
+  <script type="module" src="script.js"></script>
 </head>
 
 <body>
@@ -53,15 +54,17 @@
         </div>
         <div>
           <label for="password">Password</label>
-          <input type="password" name='password' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}'
+          <input type="password" name='password' id='password' pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}'
             title='Must contain at least one number, one uppercase letter, one lowercase letter, and be between 8-12 characters.'
-            required>
+            maxlength='12' minlength='8' required>
         </div>
         <div>
           <label for="password-confirm">Confirm Password</label>
           <input type="password" name='password-confirm'>
         </div>
       </form>
+    </div>
+    <div class="container-right-bottom">
       <div id="password-message">
         <h3>Password must contain the following:</h3>
         <p id='pwd-lowercase' class='pwd-invalid'>A lowercase letter (a-z)</p>
@@ -69,10 +72,20 @@
         <p id='pwd-number' class='pwd-invalid'>A number (0-9)</p>
         <p id='pwd-length' class='pwd-invalid'>Between 8-12 characters</p>
       </div>
-    </div>
-    <div class="container-right-bottom">
       <button form='formId' type='submit' id='submit-button'>Create Account</button>
       <p class="login-text">Already have an account? <a href=''>Log in</a></p>
+    </div>
+  </div>
+  <div id="password-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div id="password-message">
+        <h3>Password must contain the following:</h3>
+        <p id='pwd-lowercase' class='pwd-invalid'>A lowercase letter (a-z)</p>
+        <p id='pwd-uppercase' class='pwd-invalid'>A uppercase letter (A-Z)</p>
+        <p id='pwd-number' class='pwd-invalid'>A number (0-9)</p>
+        <p id='pwd-length' class='pwd-invalid'>Between 8-12 characters</p>
+      </div>
     </div>
   </div>
 
