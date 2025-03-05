@@ -62,3 +62,34 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Existing code...
+  
+  // Phone number formatting
+  const phoneInput = document.getElementById('tel');
+  if (phoneInput) {
+    phoneInput.addEventListener('input', function(e) {
+      // Get only the digits from the input
+      let digits = this.value.replace(/\D/g, '');
+      
+      // Limit to 10 digits
+      digits = digits.substring(0, 10);
+      
+      // Format the phone number
+      let formattedNumber = '';
+      if (digits.length > 0) {
+        formattedNumber += '(' + digits.substring(0, 3);
+      }
+      if (digits.length > 3) {
+        formattedNumber += ') ' + digits.substring(3, 6);
+      }
+      if (digits.length > 6) {
+        formattedNumber += '-' + digits.substring(6, 10);
+      }
+      
+      // Update the input value
+      this.value = formattedNumber;
+    });
+  }
+});
