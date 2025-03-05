@@ -309,12 +309,5 @@ a:hover {
   margin-left: 4px;
 }
 
-.error-message {
-  color: var(--invalidRed);
-  font-size: 0.8rem;
-  margin-top: 4px;
-  display: none;
-}
-
 /* Color Palette */
 /* https: //coolors.co/palette/6b9080-a4c3b2-cce3de-eaf4f4-f6fff8 */
