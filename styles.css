@@ -29,7 +29,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   display: flex;
-  font-size: 1em;
+  font-size: 1rem;
   justify-content: flex-start;
 }
 
@@ -120,22 +120,23 @@ h6 {
 }
 
 .container-right-top {
-  font-size: 1.1rem;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding: 40px 60px;
+  padding: 40px 60px 20px 60px;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.5;
+  /* overflow-y: auto; */
+  /* Allow scrolling if content is too tall */
 }
 
 .container-right-top h1 {
   color: var(--darkestGreen);
-  margin-bottom: 30px;
-  font-size: 2.2rem;
+  margin-bottom: 20px;
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -157,19 +158,18 @@ h6 {
 
 .container-right-middle {
   background-color: var(--lightGreen);
-  height: 350px;
   width: 100%;
-  -webkit-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
-  -moz-box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
   box-shadow: 0px 0px 12px 0px rgba(107, 144, 128, 0.75);
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* min-height: 300px;
+  max-height: 40vh; */
 }
 
 .container-right-middle h2 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   align-self: flex-start;
   margin-left: 10%;
   color: #476156;
@@ -183,6 +183,7 @@ h6 {
   align-items: flex-start;
   width: 80%;
   padding: 20px;
+  /* overflow-y: auto; */
 }
 
 .sign-up-form {
@@ -199,7 +200,6 @@ h6 {
   flex-direction: column;
   width: calc(50% - 15px);
   position: relative;
-  /* Add this line to make the div a positioning context */
 }
 
 .sign-up-form label {
@@ -208,7 +208,6 @@ h6 {
   margin-bottom: 4px;
   color: var(--darkestGreen);
   position: relative;
-  /* Add this to make positioning work properly */
 }
 
 .sign-up-form input {
@@ -216,7 +215,6 @@ h6 {
   border: solid --darkestGreen 2px;
   border-radius: 4px;
   width: 100%;
-
 }
 
 .sign-up-form input:focus {
@@ -297,7 +295,6 @@ a:hover {
 
 }
 
-/* Simpler alternative */
 .sign-up-form label[for="fname"]::after,
 .sign-up-form label[for="email"]::after,
 .sign-up-form label[for="password"]::after {
