@@ -172,7 +172,7 @@ h6 {
   margin-bottom: 5px;
   align-self: flex-start;
   margin-left: 10%;
-  color: #476156;
+  color: var(--darkestGreen);
 }
 
 .container-right-bottom {
@@ -301,9 +301,19 @@ a:hover {
 
 .sign-up-form label[for="fname"]::after,
 .sign-up-form label[for="email"]::after,
-.sign-up-form label[for="password"]::after {
+.sign-up-form label[for="password"]::after,
+.sign-up-form label[for="password-confirm"]::after {
   content: " (required)";
   color: var(--invalidRed);
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+.sign-up-form label[for="lname"]::after,
+.sign-up-form label[for="tel"]::after {
+  content: " (optional)";
+  color: var(--darkestGreen);
   font-size: 0.8rem;
   font-weight: normal;
   margin-left: 4px;

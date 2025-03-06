@@ -93,3 +93,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Get password fields
+  const passwordInput = document.getElementById('password');
+  const confirmInput = document.getElementById('password-confirm');
+  
+  // Function to validate password match
+  function validatePasswordMatch() {
+    if(passwordInput.value !== confirmInput.value) {
+      confirmInput.setCustomValidity("Passwords don't match");
+    } else {
+      confirmInput.setCustomValidity('');
+    }
+  }
+  
+  // Add event listeners to both password fields
+  passwordInput.addEventListener('input', validatePasswordMatch);
+  confirmInput.addEventListener('input', validatePasswordMatch);
+  
+  // Also validate on form submission
+  document.getElementById('formId').addEventListener('submit', function(event) {
+    validatePasswordMatch();
+    
+    if(!this.checkValidity()) {
+      event.preventDefault();
+    }
+  });
+});
