@@ -61,7 +61,8 @@
         </div>
         <div>
           <label for="password-confirm">Confirm Password</label>
-          <input type="password" id='password-confirm' name='password-confirm' required>
+          <input type="password" id='password-confirm' name='password-confirm'
+            pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}' maxlength='12' minlength='8' required>
         </div>
       </form>
     </div>
