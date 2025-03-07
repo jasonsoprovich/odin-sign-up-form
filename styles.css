@@ -230,13 +230,6 @@ h6 {
   outline: none;
 }
 
-.sign-up-form input:invalid {
-  /* padding: 8px;
-  border: solid var(--invalidRed) 2px;
-  border-radius: 4px;
-  box-shadow: none; */
-}
-
 /* Apply invalid styling only after the field has been interacted with */
 .sign-up-form input:not(:placeholder-shown):invalid {
   border: solid var(--invalidRed) 2px;
@@ -393,6 +386,54 @@ a:hover {
     width: 100%;
     height: auto;
   }
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.validation-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+/* Valid input styling */
+input:not(:placeholder-shown):valid+.validation-icon::before {
+  content: '\2714';
+  /* Checkmark */
+  color: var(--validGreen);
+  display: inline-block;
+}
+
+/* Invalid input styling */
+input:not(:placeholder-shown):invalid+.validation-icon::before {
+  content: '\2716';
+  /* X mark */
+  color: var(--invalidRed);
+  display: inline-block;
+}
+
+/* For the touched class approach */
+input.touched:valid+.validation-icon::before {
+  content: '\2714';
+  color: var(--validGreen);
+  display: inline-block;
+}
+
+input.touched:invalid+.validation-icon::before {
+  content: '\2716';
+  color: var(--invalidRed);
+  display: inline-block;
+}
+
+/* Optional fields - don't show X when empty */
+input[name="lname"]:not(:placeholder-shown):invalid+.validation-icon::before,
+input[name="tel"]:not(:placeholder-shown):invalid+.validation-icon::before {
+  content: '';
 }
 
 /* Color Palette */
