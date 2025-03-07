@@ -36,29 +36,29 @@
     <div class="container-right-middle">
       <form id='formId' class='sign-up-form' action='' method='post'>
         <h2>Create an account</h2>
-        <div>
+        <div class='input-container'>
           <label for="fname">First Name</label>
           <input type="text" name='fname' placeholder=' ' required>
           <span class="validation-icon"></span>
         </div>
-        <div>
+        <div class='input-container'>
           <label for="lname">Last Name</label>
           <input type="text" name='lname' placeholder=' '>
           <span class="validation-icon"></span>
         </div>
-        <div>
+        <div class='input-container'>
           <label for="email">Email</label>
           <input type="email" name='email' placeholder=' ' required
             pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
           <span class="validation-icon"></span>
         </div>
-        <div>
+        <div class='input-container'>
           <label for="tel">Phone Number</label>
           <input type="tel" id="tel" name="tel" placeholder="(555) 555-5555" pattern="\(\d{3}\)\s\d{3}-\d{4}"
             title="Phone number format: (555) 555-5555">
           <span class="validation-icon"></span>
         </div>
-        <div class="password-wrapper">
+        <div class='password-wrapper input-container'>
           <label for="password">Password</label>
           <input type="password" id="password" name="password" placeholder=' '
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}"
@@ -73,7 +73,7 @@
             <p id="pwd-length" class="pwd-invalid">Between 8-12 characters</p>
           </div>
         </div>
-        <div>
+        <div class='input-container'>
           <label for="password-confirm">Confirm Password</label>
           <input type="password" id='password-confirm' name='password-confirm' placeholder=' '
             pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}' maxlength='12' minlength='8' required>

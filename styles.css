@@ -212,10 +212,13 @@ h6 {
 }
 
 .sign-up-form input {
-  padding: 8px;
+  height: 40px;
+  line-height: 40px;
+  padding: 8px 35px 8px 8px;
   border: solid var(--darkestGreen) 2px;
   border-radius: 4px;
   width: clamp(200px, 100%, 400px);
+  box-sizing: border-box;
 }
 
 .sign-up-form input[type="tel"] {
@@ -396,9 +399,13 @@ a:hover {
 .validation-icon {
   position: absolute;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
+  bottom: 0;
+  margin: auto;
   pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Valid input styling */
