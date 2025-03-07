@@ -80,13 +80,8 @@ h6 {
   isolation: isolate;
 }
 
-
 .container-left {
-  width: 30%;
-  min-width: 300px;
-  /* Set minimum width for left panel */
-  max-width: 450px;
-  /* Set maximum width to prevent logo text wrapping */
+  width: clamp(350px, 30%, 550px);
   height: 100vh;
   background-image: url('./images/henry-be-lc7xcWebECc-unsplash.jpg');
   background-size: cover;
@@ -97,7 +92,6 @@ h6 {
   flex-shrink: 0;
   /* Prevent this from shrinking too much */
 }
-
 
 .logo-banner {
   position: absolute;
