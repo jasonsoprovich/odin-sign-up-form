@@ -336,9 +336,9 @@ a:hover {
 }
 
 .pwd-valid:before {
-  position: relative;
-  left: -35px;
   content: '\2714';
+  margin-right: 8px;
+  display: inline-block;
 }
 
 .pwd-invalid {
@@ -346,10 +346,9 @@ a:hover {
 }
 
 .pwd-invalid:before {
-  position: relative;
-  left: -35px;
   content: '\2716';
-
+  margin-right: 8px;
+  display: inline-block;
 }
 
 .sign-up-form label[for="fname"]::after,
