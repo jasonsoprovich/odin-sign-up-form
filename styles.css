@@ -33,7 +33,6 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
-  /* Prevent whole page scrolling */
 }
 
 img,
@@ -90,7 +89,6 @@ h6 {
   flex-direction: column;
   position: relative;
   flex-shrink: 0;
-  /* Prevent this from shrinking too much */
 }
 
 .logo-banner {
@@ -114,28 +112,22 @@ h6 {
 
 .container-right {
   flex: 1;
-  /* Take remaining space */
   height: 100vh;
   background-color: var(--bgGreen);
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  /* Hide overflow */
+  overflow-y: auto;
 }
 
 .container-right-top {
-  flex: 1;
-  /* Take 1 part of space */
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
   padding: 40px 60px;
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.5;
-  overflow-y: auto;
-  /* Allow scrolling in this section if needed */
 }
 
 .container-right-top h1 {
@@ -170,35 +162,36 @@ h6 {
   flex-direction: column;
   align-items: center;
   z-index: 1;
-  /* Ensure it's above other elements */
 }
 
 .container-right-middle h2 {
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   align-self: flex-start;
-  margin-left: 10%;
+  margin-left: 10px;
   color: var(--darkestGreen);
+  width: 100%;
 }
 
 .container-right-bottom {
   flex: 0 0 auto;
-  /* Fixed height based on content */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 80%;
+  width: 100%;
+  max-width: 800px;
   padding: 20px 60px;
+  margin: 0 auto;
 }
 
 .sign-up-form {
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
+  width: 80%;
+  margin: 0 auto 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
+  max-width: 800px;
 }
 
 .sign-up-form div {
@@ -206,6 +199,7 @@ h6 {
   flex-direction: column;
   width: calc(50% - 15px);
   position: relative;
+  max-width: 380px;
 }
 
 .sign-up-form label {
@@ -214,13 +208,14 @@ h6 {
   margin-bottom: 4px;
   color: var(--darkestGreen);
   position: relative;
+  width: clamp(200px, 100%, 400px);
 }
 
 .sign-up-form input {
   padding: 8px;
-  border: solid --darkestGreen 2px;
+  border: solid var(--darkestGreen) 2px;
   border-radius: 4px;
-  width: 100%;
+  width: clamp(200px, 100%, 400px);
 }
 
 .sign-up-form input[type="tel"] {
@@ -231,7 +226,7 @@ h6 {
   padding: 8px;
   border-radius: 4px;
   background-color: var(--activeInputGreen);
-  width: 100%;
+  /* width: 100%; */
   box-shadow: none;
   outline: none;
 }
@@ -240,18 +235,17 @@ h6 {
   padding: 8px;
   border: solid var(--invalidRed) 2px;
   border-radius: 4px;
-  width: 100%;
+  /* width: 100%; */
   box-shadow: none;
 }
 
-/* For smaller screens, make the form inputs full width */
-@media (max-width: 768px) {
+/* Collapse to column view under 925px width */
+@media (max-width: 925px) {
   .sign-up-form div {
     width: 100%;
   }
 }
 
-/* Move submit button to the bottom container */
 #submit-button {
   background-color: var(--darkGreen);
   border: none;
@@ -280,6 +274,10 @@ a:hover {
   filter: brightness(1.2);
 }
 
+.password-wrapper {
+  position: relative;
+}
+
 #password-message {
   display: none;
   background: var(--lightGreen);
@@ -292,16 +290,14 @@ a:hover {
   z-index: 10;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   width: 250px;
-  left: calc(100% + 10px);
-  /* Position to the right of the password field */
-  top: 0;
+  left: 0;
+  top: 100%;
 }
 
 @media (max-width: 1200px) {
   #password-message {
     left: 0;
     top: calc(100% + 5px);
-    /* Position below the password field instead */
     width: 100%;
   }
 }
