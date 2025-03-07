@@ -226,17 +226,35 @@ h6 {
   padding: 8px;
   border-radius: 4px;
   background-color: var(--activeInputGreen);
-  /* width: 100%; */
   box-shadow: none;
   outline: none;
 }
 
 .sign-up-form input:invalid {
-  padding: 8px;
+  /* padding: 8px;
   border: solid var(--invalidRed) 2px;
   border-radius: 4px;
-  /* width: 100%; */
-  box-shadow: none;
+  box-shadow: none; */
+}
+
+/* Apply invalid styling only after the field has been interacted with */
+.sign-up-form input:not(:placeholder-shown):invalid {
+  border: solid var(--invalidRed) 2px;
+}
+
+/* Style for when field has been properly filled */
+.sign-up-form input:not(:placeholder-shown):valid {
+  border: solid var(--validGreen) 2px;
+}
+
+/* Only show invalid styling for fields that have been touched */
+.sign-up-form input.touched:invalid {
+  border: solid var(--invalidRed) 2px;
+}
+
+/* Style for when touched field has been properly filled */
+.sign-up-form input.touched:valid {
+  border: solid var(--validGreen) 2px;
 }
 
 /* Collapse to column view under 925px width */
@@ -260,6 +278,12 @@ h6 {
 
 #submit-button:hover {
   filter: brightness(1.2);
+}
+
+#submit-button:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0 0 0 2px var(--darkGreen);
 }
 
 input {

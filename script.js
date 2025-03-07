@@ -78,3 +78,9 @@ function initPasswordConfirmation() {
     if (!this.checkValidity()) event.preventDefault();
   });
 }
+
+document.querySelectorAll('.sign-up-form input').forEach(input => {
+  input.addEventListener('blur', function () {
+    this.classList.add('touched');
+  });
+});
