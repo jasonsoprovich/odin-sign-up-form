@@ -12,7 +12,5 @@ The sign-up page includes the following main features:
 - layout changes to single column view when viewport width is reduced
 
 Known Issues:
-- password verification message not aligned/showing correctly on page
-- need to add checkmark and x-mark validation icons to fields
-- adjust styling to start with neutral borders and only change to red when input
-is interacted with by the user leaving the input in an invalid state
+- adjust positioning of checkmark and x-mark validation icons in input fields
+- x-mark validation icon not working correctly for phone number input
