@@ -8,7 +8,9 @@
   margin: 0;
   --darkestGreen: #476156;
   --darkGreen: #6b9080;
+  --logoColor: #eaf4f4;
   --activeInput: #eaf4f450;
+  --imageCredit: #eaf4f490;
   --invalidRed: #D55C5F;
   --validGreen: rgb(0, 164, 0);
   --bgGreen: #cce3de;
@@ -106,9 +108,26 @@ h6 {
   font-family: 'adelia';
   font-weight: bold;
   font-style: normal;
-  color: #eaf4f4;
+  color: var(--logoColor);
   font-size: 2rem;
 }
+
+.image-credit {
+  position: absolute;
+  color: var(--logoColor);
+  bottom: 10px;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.image-credit a,
+.image-credit p {
+  color: var(--imageCredit);
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
 
 .container-right {
   flex: 1;
