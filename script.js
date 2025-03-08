@@ -137,3 +137,27 @@ function initTogglePasswords() {
 document.addEventListener('DOMContentLoaded', () => {
   initTogglePasswords(); 
 });
+
+/**
+ * Hide show/hide icons if password field is empty
+ */
+function hideToggleIconsWhenEmpty() {
+  const fields = [
+    { input: document.getElementById('password'), toggle: document.getElementById('toggle-password') },
+    { input: document.getElementById('password-confirm'), toggle: document.getElementById('toggle-password-confirm') },
+  ];
+  
+  fields.forEach(({ input, toggle }) => {
+    if (!input || !toggle) return;
+
+    input.addEventListener('input', () => {
+      toggle.style.display = input.value.length > 0 ? 'block' : 'none';
+    });
+
+    toggle.style.display = input.value.length > 0 ? 'block' : 'none';
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  hideToggleIconsWhenEmpty();
+});
