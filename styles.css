@@ -154,6 +154,7 @@ h6 {
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: bold;
+  text-align: center;
 }
 
 .container-right-top p {
@@ -244,23 +245,18 @@ h6 {
   font-family: monospace;
 }
 
-
-/* Apply invalid styling only after the field has been interacted with */
 .sign-up-form input:not(:placeholder-shown):invalid {
   border: solid var(--invalidRed) 2px;
 }
 
-/* Style for when field has been properly filled */
 .sign-up-form input:not(:placeholder-shown):valid {
   border: solid var(--validGreen) 2px;
 }
 
-/* Only show invalid styling for fields that have been touched */
 .sign-up-form input.touched:invalid {
   border: solid var(--invalidRed) 2px;
 }
 
-/* Style for when touched field has been properly filled */
 .sign-up-form input.touched:valid {
   border: solid var(--validGreen) 2px;
 }
@@ -273,7 +269,7 @@ h6 {
   background-color: var(--activeInput);
 }
 
-/* Collapse to column view under 925px width */
+/* Collapse to column view under 925px width to prevent input overlap */
 @media (max-width: 925px) {
   .sign-up-form div {
     width: 100%;
@@ -314,6 +310,7 @@ a:hover {
   filter: brightness(1.2);
 }
 
+/* Password Validation Message */
 .password-wrapper {
   position: relative;
 }
@@ -411,6 +408,7 @@ a:hover {
   }
 }
 
+/* Validation Icon */
 .input-container {
   position: relative;
   width: 100%;
@@ -427,7 +425,7 @@ a:hover {
   pointer-events: none;
 }
 
-/* Valid input styling */
+/* Valid/Invalid Icon States */
 input:not(:placeholder-shown):valid+.validation-icon::before {
   content: '\2714';
   /* Checkmark */
@@ -435,7 +433,6 @@ input:not(:placeholder-shown):valid+.validation-icon::before {
   display: inline-block;
 }
 
-/* Invalid input styling */
 input:not(:placeholder-shown):invalid+.validation-icon::before {
   content: '\2716';
   /* X mark */
@@ -443,7 +440,6 @@ input:not(:placeholder-shown):invalid+.validation-icon::before {
   display: inline-block;
 }
 
-/* For the touched class approach */
 input.touched:valid+.validation-icon::before {
   content: '\2714';
   color: var(--validGreen);
@@ -456,7 +452,7 @@ input.touched:invalid+.validation-icon::before {
   display: inline-block;
 }
 
-/* Optional fields - don't show X when empty */
+/* Hide "X" for empty optional fields */
 input[name="lname"]:not(:placeholder-shown):invalid+.validation-icon::before {
   content: '';
 }
