@@ -10,7 +10,3 @@ The sign-up page includes the following main features:
 - custom validation for password field, password confirmation input
 - custom validation and masking for phone number input
 - layout changes to single column view when viewport width is reduced
-
-Known Issues:
-- adjust positioning of checkmark and x-mark validation icons in input fields
-- x-mark validation icon not working correctly for phone number input
