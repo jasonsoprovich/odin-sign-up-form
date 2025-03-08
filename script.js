@@ -99,7 +99,9 @@ function trackTouchedInputs() {
 }
 
 
-
+/**
+ * Show/Hide password toggle
+ */
 function initTogglePasswords() {
   const togglePassword = document.getElementById('toggle-password');
   const togglePasswordConfirm = document.getElementById('toggle-password-confirm');
@@ -108,20 +110,15 @@ function initTogglePasswords() {
     const input = document.getElementById(inputId);
     const isCurrentlyPassword = input.type === 'password';
 
-    // Flip the input type
     input.type = isCurrentlyPassword ? 'text' : 'password';
 
-    // Swap the image source
     if (isCurrentlyPassword) {
-      // If it was password, we now show text, so set the "hide" icon
       imgElement.src = './images/eye-password-hide-svgrepo-com.svg';
     } else {
-      // If it was text, we revert to password, so set the "show" icon
       imgElement.src = './images/eye-key-look-password-security-see-svgrepo-com.svg';
     }
   }
 
-  // If the toggle elements exist, attach click handlers
   if (togglePassword) {
     const toggleImg = document.getElementById('toggle-password-img'); 
     togglePassword.addEventListener('click', () => {
