@@ -8,7 +8,7 @@
   margin: 0;
   --darkestGreen: #476156;
   --darkGreen: #6b9080;
-  --activeInput: #eaf4f4;
+  --activeInput: #eaf4f450;
   --invalidRed: #D55C5F;
   --validGreen: rgb(0, 164, 0);
   --bgGreen: #cce3de;
@@ -225,13 +225,6 @@ h6 {
   font-family: monospace;
 }
 
-.sign-up-form input:focus {
-  padding: 8px;
-  border-radius: 4px;
-  background-color: var(pink, --activeInputGreen);
-  box-shadow: none;
-  outline: none;
-}
 
 /* Apply invalid styling only after the field has been interacted with */
 .sign-up-form input:not(:placeholder-shown):invalid {
@@ -251,6 +244,14 @@ h6 {
 /* Style for when touched field has been properly filled */
 .sign-up-form input.touched:valid {
   border: solid var(--validGreen) 2px;
+}
+
+.sign-up-form input:focus,
+.sign-up-form input:focus:valid,
+.sign-up-form input:focus:invalid {
+  border: 2px solid var(--darkestGreen);
+  outline: none;
+  background-color: var(--activeInput);
 }
 
 /* Collapse to column view under 925px width */
