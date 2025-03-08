@@ -228,7 +228,7 @@ h6 {
 .sign-up-form input:focus {
   padding: 8px;
   border-radius: 4px;
-  background-color: var(--activeInputGreen);
+  background-color: var(pink, --activeInputGreen);
   box-shadow: none;
   outline: none;
 }
@@ -398,13 +398,13 @@ a:hover {
 
 .validation-icon {
   position: absolute;
+  top: 25px;
+  bottom: 0;
   right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  pointer-events: none;
+  margin: auto 0;
   display: flex;
   align-items: center;
-  justify-content: center;
+  pointer-events: none;
 }
 
 /* Valid input styling */
