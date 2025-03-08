@@ -303,7 +303,7 @@ input {
 }
 
 a {
-  color: #476156;
+  color: var(--darkestGreen);
 }
 
 a:hover {
@@ -382,6 +382,27 @@ a:hover {
   font-size: 0.8rem;
   font-weight: normal;
   margin-left: 4px;
+}
+
+.toggle-password {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 25px;
+  bottom: 0;
+  right: 30px;
+  margin: auto 0;
+}
+
+.toggle-password img {
+  opacity: 0.5;
+}
+
+.toggle-password img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 @media (max-width: 768px) {
