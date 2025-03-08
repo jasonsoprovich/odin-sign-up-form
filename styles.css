@@ -399,9 +399,8 @@ a:hover {
 .validation-icon {
   position: absolute;
   right: 10px;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
   display: flex;
   align-items: center;
@@ -438,8 +437,7 @@ input.touched:invalid+.validation-icon::before {
 }
 
 /* Optional fields - don't show X when empty */
-input[name="lname"]:not(:placeholder-shown):invalid+.validation-icon::before,
-input[name="tel"]:not(:placeholder-shown):invalid+.validation-icon::before {
+input[name="lname"]:not(:placeholder-shown):invalid+.validation-icon::before {
   content: '';
 }
 
